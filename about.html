@@ -1,0 +1,99 @@
+<html>
+  <head>
+  <title>Austin's Home Helper Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="icon.png">
+    <script>
+      const span = document.querySelector("span");
+
+span.onclick = function() {
+  document.execCommand("copy");
+}
+
+span.addEventListener("copy", function(event) {
+  event.preventDefault();
+  if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", span.textContent);
+    console.log(event.clipboardData.getData("text"))
+  }
+});
+    </script>
+    <style>
+      body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #11563b;
+}
+      #shadowBox {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Black w/opacity/see-through */
+    border: 3px solid;
+}
+.main {
+  font-size: 16px;
+  font-family: monospace;
+}  
+.rainbow {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 32px;
+    font-family: monospace;
+    letter-spacing: 5px;
+}
+.rainbow_text_animated {
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+  
+    </style>
+</head>
+<ul>
+  <li><a class="main" href="index.html"><b>Home</b></a></li>
+  <li><a class="main" href="contact.html"><b>Contact</b></a></li>
+  <li><a class="active main" href="about.html"><b>About</b></a></li>
+</ul>
+
+<div style="padding:20px;margin-top:30px;background-color:#ffffff;height:1500px;">
+  <h1 class="rainbow rainbow_text_animated">About</h1>
+  <body class="main">This website is entirely made by meeee, Austin Outland. I am trying to raise money to build a pc. I have always wanted to be a pilot and the pc will be made to run Microsoft Flight Simulator. I am trying to raise money by myself and do all of this myself. I have always loved computers (proof: this website) and I have always wanted to build a pc. I already have all the parts picked out and have started. I also want to do this to help out around the nehiborhood.</body>
