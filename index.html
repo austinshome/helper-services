@@ -3,6 +3,21 @@
   <title>Austin's Home Helper Services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image" href="icon.png">
+    <script>
+      const span = document.querySelector("span");
+
+span.onclick = function() {
+  document.execCommand("copy");
+}
+
+span.addEventListener("copy", function(event) {
+  event.preventDefault();
+  if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", span.textContent);
+    console.log(event.clipboardData.getData("text"))
+  }
+});
+    </script>
     <style>
       #shadowBox {
     background-color: rgb(0, 0, 0);
@@ -44,31 +59,32 @@
 </head>
 
   <h1 class="rainbow rainbow_text_animated">Austin's Home Helper Services</h1>
-  <body class="main"> Hi there! I’m Austin at Austin's Home Helper Services Whether you need a hand with small tasks around the house or yard, I’m here to lend one!
-
-What I Can Help With:
-Taking out the trash & recycling
-
+  <body class="main"> Hi there! I’m Austin at Austin's Home Helper Services Whether you need a hand with small tasks around the house or yard, I’m here to help!
+  </br>
+What I Can Help With: </br>
+Taking out the trash & recycling </br>
+</br>
 Lawn mowing & leaf raking
-
+</br>
 Watering plants or small gardening tasks
-
+</br>
 Sweeping porches & walkways
-
+</br>
 Fetching mail or packages
-
+</br>
 Organizing garages, sheds, or closets
-
+</br>
 Pet care (walking, feeding, playing)
-
+</br>
 Any other tasks — just ask!
-
+</br>
 Availability:
-After school, weekends, and during school breaks — just reach out to schedule a time that works for you!
-Contact Me:
-Phone: 303-519-8468
-Email: austin.t.outland@gmail.com
-Let’s make your to-do list a little shorter — one odd job at a time. Thanks for supporting your neighborhood helper!
+    </br>
+After school, weekends, and during school breaks — just reach out to schedule a time that works for you! </br>
+Contact Me: </br>
+Phone: <span>303-519-8468</span> </br>
+Email: <span>austin.t.outland@gmail.com </span> </br>
+Let’s make your to-do list a little shorter — one odd job at a time. Thanks for supporting your neighborhood helper! </br>
 — Austin
 </body>
 </html>
